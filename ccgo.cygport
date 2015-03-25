@@ -1,0 +1,17 @@
+NAME="ccgo"
+VERSION=0.3.6.4
+RELEASE=1
+CATEGORY="Games"
+SUMMARY="GTK+ interface to gnugo and IGS"
+DESCRIPTION="ccGo is a program allows you to play go with gnugo on your
+computer or with other players on the IGS on the internet."
+HOMEPAGE="http://ccdw.org/~cjj/prog/ccgo/"
+SRC_URI="${HOMEPAGE}/src/ccgo-${VERSION}.tar.gz"
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/ccgo.git/plain/ccgo-0.3.6.4-Pass-compilation-with-Wformat-security.patch
+	0.3.6.4-vpath.patch
+"
+
+REQUIRES="gnugo"
+
+DIFF_EXCLUDES="config.hh.in"
